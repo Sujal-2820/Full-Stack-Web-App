@@ -51,6 +51,15 @@ The contents in this project follow the below structure
 
 - We have also implemented User Authentication using OAuth 2.0 fulfilled by the Google Cloud Console.
 
+## Website Snippets
+
+<img src="./Designs/Home Screen.png" width="45%">&nbsp
+<img src="./Designs/Carousel.png" width="45%"><br>
+<img src="./Designs/Donation Boxes.png" width="20%">
+<img src="./Designs/PlaceList1.png" width="20%">
+<img src="./Designs/PlaceList2.png" width="20%">
+
+
  
 ## API Reference
 
