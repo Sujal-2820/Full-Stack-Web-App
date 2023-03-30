@@ -1,5 +1,7 @@
 # HelpGeared
 
+<img src="./Designs/starting.png" width="100%"/>
+
 A Google DSC Solution made to provide a centralized platform that provides comprehensive information on NGOs and orphanages in specific areas, making it easy for users to find and donate to them. Our goal is to facilitate a transparent and accountable donation process that builds trust between donors and recipients.
 
 
