@@ -67,7 +67,7 @@ The contents in this project follow the below structure
 #### Get the Places List and Details
 
 ```http
-  GET https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY&libraries=places&callback=initMap
+  GET https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap
 ```
 
 | Parameter | Type     | Description                |
