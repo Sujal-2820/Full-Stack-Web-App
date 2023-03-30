@@ -1,0 +1,954 @@
+<%- include("partials/header") %>
+
+
+<style>
+#neubar {
+    background: white;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.252);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+  }
+   
+  .nav-item .active {
+    border-radius: 6px;
+    color:black;
+                  
+    
+  }
+  
+  #neubar .nav-item {
+    margin : auto 4px;
+    font-size: 18px;
+  }
+  #neubar a {
+    color: black;
+    padding-left:12px;
+    padding-right:12px;
+  }
+  
+  #navbarNavDropdown :hover{
+    color: darkgreen;
+  }
+  
+  #neubar .dropdown-menu {
+   
+    color: black;
+  
+  }
+  
+  .dropdown-itemr{
+    color:black;
+  }
+  
+  #title{
+   text-decoration: underline;
+   font-weight: bold;
+   color:darkgreen; 
+   margin-left: -97px;
+  }
+  
+  
+  a.navbar-brand {
+    color:darkgreen;
+    font-size: 30px;
+  }
+  
+  
+    /* for Intro Container */ 
+  .main-container{
+    background-color: white;
+  }
+  
+   #intro-container{ 
+     background-color: white; 
+    
+   }
+  
+  
+   #head-1{   
+     color:black;
+      margin-left: 4rem;    
+     width: 25ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid; 
+     font-weight: bold; 
+     text-align: center; 
+     font-family: sans-serif;
+    
+  } 
+
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    40% {
+      border-color: transparent
+    }
+  }
+   
+  #head-2{
+      margin-left: 180px;    
+     width: 28ch;
+     text-align: center; 
+  color: #222222;  
+    font-size: 3rem; 
+  
+
+}
+  
+  
+   #para-1{
+     font-size: 25px;
+     margin-left: 220px;
+     text-align: center;
+   }
+
+
+  .introDIV{
+    margin: 20px 150px;
+    background-color: #ababab;
+  }
+   #intro-text{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color:#313131;
+    max-width: 0%;
+   }
+  
+   #intro-text h1{
+    font-size: 50px; 
+    text-align: center; 
+    margin-left: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   } 
+
+  #intro-text h2{
+   font-size: 38px; 
+   text-align: center;
+   margin-left: 120px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+#intro-text a{
+  margin-left: 373px;
+  padding-top: 12px;
+}
+
+  
+  
+  
+  
+   /* for donation boxes */
+  
+   .text-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }  
+  .new-container{
+    margin: 0px 30px 0px;
+    display : flex;
+    align-items : center;
+    justify-content : center;  
+    background-color: rgb(111, 253, 111);
+    min-height : 623px; 
+    border-radius: 30px;
+  }
+  
+  .contain {
+    position : relative;
+    width : 1000px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : warp;
+    padding : 30px;  
+  }
+  
+  .contain .card_new {
+    position: relative;
+    max-width : 340px;
+    height : 238px;  
+    background-color : #FFE6A7;
+    margin : 30px 10px;
+    padding : 20px 15px;
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+  }
+  .contain .card_new:hover {
+    height : 380px; 
+    margin-top: 130px;
+  }
+  
+  
+  .contain .card_new .image {
+    position : relative;
+    width : 260px;
+    height : 260px;
+    top : -40%;
+    left: 25px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1; 
+    background-color:#432818 ;
+  }
+  
+  .contain .card_new .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .contain .card_new .content {
+    position : relative;
+    top : -190px;
+    padding : 10px 15px;
+    color : #432818;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  } 
+  
+  .contain .card_new:hover .content {
+     margin-top : 60px; 
+    padding-top: 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  } 
+
+
+
+  .contain .card_new .content h3{  
+    color: #6F1D1B; 
+    font-weight: 600;
+
+  } 
+  
+ 
+  /* About the creators */
+  @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+  
+  .Creators-heading{
+    padding-top: 10px;
+    color:#6b2221; 
+    font-weight: 700;
+  }
+  .Creators-heading:hover{
+    color: #348db1;
+    text-decoration: underline;
+  }
+  
+  .Creator-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 75px;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    background-color:#BB9457;
+    font-family: 'Baloo Paaji 2', cursive;
+  }
+  
+  .Creator-card {
+    background-color: #432818;
+    height: 37rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    color: wheat;
+  }
+  
+  .card__name {
+    margin-top: 5px;
+    font-size: 1.5em;
+  }
+  
+  .card__image {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid #272133;
+    margin-top: 20px;
+    box-shadow: 0 10px 50px #ffe6a7da;
+  }
+  
+  
+  .draw-border {
+    box-shadow: inset 0 0 0 4px #FFE6A7;
+    color: #dca038;
+    -webkit-transition: color 0.25s 0.0833333333s;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+  }
+  
+  .draw-border::before,
+  .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0rem;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+  }
+  
+  .draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  
+  .draw-border:hover {
+    color: #ffe593;
+  }
+  
+  .draw-border:hover::before,
+  .draw-border:hover::after {
+    border-color: #BB9457;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .draw-border:hover::before {
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  
+  .draw-border:hover::after {
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+  }
+  
+  .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+    padding: 0.75em 2em;
+    letter-spacing: 0.05rem;
+    margin: 1em;
+    width: 16ch; 
+    align-items: center;
+  }
+  
+  .btn:focus {
+    outline: 2px dotted #6F1D1B;
+  }
+  
+  
+  .social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+  }
+  
+  .social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1em;
+  }
+  
+  .social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 0.95em;
+    left: 0.96em;
+    transition: all 265ms ease-out;
+  }
+  
+  .social-icons a {
+    display: inline-block; 
+
+  }
+  
+  .social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #99582A, #BB9457);
+    transition: all 265ms ease-out;
+  }
+  
+  .social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+  }
+  
+  .social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #FFE6A7;
+    background: -webkit-linear-gradient(45deg, #99582A, #FFE6A7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+  }
+  
+  .grid-container {
+    font-size: 1.3em;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+  }
+  
+   
+
+  
+  
+  
+  
+  /* About page */
+  .AboutUsContainer{
+      background-color:#BB9457 ;
+      color: white;
+      height:max-content;
+      width: 100%;
+      justify-content: space-around;
+      display: flex;
+      
+  }
+  
+   
+  
+  .text{
+      margin-top: 100px;
+      font-size: larger;
+      padding: 10px;
+      margin-left: 100px;
+      margin-right: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+     
+  }
+  
+  .abtus{
+    text-shadow: 1px 2px 2px white;
+    margin-top: -20px;
+    margin-left: -50px;
+    color: #e0991f;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  .img{
+    height: 500px;
+    width:  600px;
+    margin-top: 135px;
+    margin-right: 40px;
+  }
+  
+  .hd{
+    margin-top: 50px;
+  }
+  .button {
+    background: black;
+    background-image: -webkit-linear-gradient(top, black, black);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    display: inline-block;
+    color: wheat;
+    font-size: 22px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none; 
+    margin-left: 455px; 
+    width: 163px; 
+    height: 59px;
+  }
+  
+  .button:hover {
+    background: #6F1D1B;
+    text-decoration: none; 
+    color:white;
+  }
+  
+  /* About Section */ 
+  .heading{
+    color:#e0991f;
+    text-shadow: 1px 2px 2px white;
+    margin: 10px;
+  } 
+  
+  .sprt{
+    margin-top: 20px;
+    text-shadow: 1px 2px 2px #e0991f;
+  }
+  
+  
+  
+  #testimonials{
+      text-align: center;
+      background-color: #000000;
+  } 
+
+  .carousel-item{
+      padding: 7% 21%;
+      opacity: 0.79;  
+  }
+  
+  .testimonial-text{ 
+    font-weight: bold; 
+    color:#e79b18; 
+    margin-top: -40px;
+  } 
+  .testimonial-para{
+    font-weight: 1.8rem; 
+    font-size: 1.3rem;
+  }
+  
+  .carousel-control-prev-icon{
+    background-color: black;
+  }
+  
+  .carousel-control-next-icon{
+    background-color: black;
+  }
+  
+  
+  /* Press Section */
+  #press{
+      background-color:#432818;
+      text-align: center;
+      padding-bottom: 3%;
+  }
+  .press-logo{
+      width: 15%;
+      margin: 20px 20px 50px;   /* top  left-right  bottom */
+  }
+  
+  
+  /* form-section CSS */
+  
+  body{
+    background-color: #BB9457;
+  }
+  
+  .form-title{
+    margin-top: 20px;
+    color: #99582A;
+    margin-left: 20%;
+    margin-right: 27%;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 15px;
+  }
+  
+  .form-container{
+    color: #99582A;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-left: 30%;
+    margin-bottom: 80px;
+  }
+  
+  .form-group{
+    padding: 10px;
+  }
+  
+  .form-check{
+    font-size: 10px;
+  }
+  
+  .button-1 {
+    background: white;
+    border-radius: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    display: inline-block;
+    color: #99582A;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none; 
+    margin-top:8px; 
+  }
+  
+  .button-1:hover {
+    background:#99582A;
+    background-image: -webkit-linear-gradient(top, #e0991f, #e0991f);
+    text-decoration: none; 
+    color:black;
+  }
+  
+
+  
+  
+  /* form {
+    border: 5px solid #f1f1f1;
+    }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    button {
+    background-color: #8ebf42;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+    }
+    h1 {
+    text-align:center;
+    font-size:18; 
+      color: #e0991f;
+    }
+    button:hover {
+    opacity: 0.8;
+    }
+    .formcontainer {
+    text-align: left;
+    margin: 24px 50px 12px;
+    }
+    .container {
+    padding: 16px 0;
+    text-align:left;
+    }
+    span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+    }
+    .form-label{
+      color: white;
+    }
+    #user-form{
+      padding-top: 5px; 
+      margin-top: 150px;
+    }
+    @media screen and (max-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+  }
+   */
+  #NGO-Boxes{
+    margin-top: 20px;
+  }
+  
+  
+  
+  /* Place Details */
+  
+  .inputBOX{
+    border: 3px solid #e0991f;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  
+  .inputBOX{
+    margin: 0px auto 0px;
+  }
+  
+  .card{
+    margin: 0px auto 0px;
+    margin-bottom: 25px;
+    width: 50%;
+  }
+  
+  .Place-name{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 3px;
+  }
+  
+  .card-image{
+    margin: 0px auto 0px;
+    padding-bottom: 5px;
+  }
+  
+  .address{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  
+  
+  .detailsButton{
+    background-color: greenyellow;
+    color: black;
+    border: 2px solid rgb(46, 66, 15);
+    width: 30%;
+    border-radius: 5px;
+  }
+  
+  .detailsButton:hover{
+    background-color: #6F1D1B;
+    color: white;
+    border: 2px solid #6F1D1B;
+    border-radius: 10px;
+  }
+  
+  .MapsButton{
+    background-color: #FFE6A7;
+    color: white;
+    border: 2px solid rgb(66, 15, 15);
+    width: 30%;
+    border-radius: 5px;
+  }
+  
+  .MapsButton:hover{
+    background-color: #6F1D1B;
+    color: white;
+    border: 2px solid #99582A;
+    border-radius: 10px;
+  }
+
+
+
+/* Carousel  */
+
+/* 
+#testimonials{
+    text-align: center;
+    background-color: #000000;
+}
+
+.carousel-inner{
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item{
+    padding: 7% 21%;
+    background-image: url("cover_img.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+      
+}
+
+.testimonial-text{ 
+  font-weight: bold; 
+  color:#e79b18; 
+  margin-top: -40px;
+} 
+.testimonial-para{
+  font-weight: 1.8rem; 
+  font-size: 1.3rem;
+}
+ */
+
+#testimonials{
+    text-align: center;
+    background-color: #6b6b6b;
+    margin: 20px 150px 20px;
+    border-radius: 30px;
+}
+
+.testimonial-image{
+    width: 120%;
+    height: 600px;
+    border-radius: 10%;-right: 30px;
+margin-left: -65px; 
+}
+
+.carousel-item{
+    padding: 7% 21%;
+}
+
+.carousel-control-prev-icon{
+  background-color: black;
+}
+
+.carousel-control-next-icon{
+  background-color: black;
+}
+  
+  
+  /* footer section */
+  
+  .footer {
+    background-color: #1a1a1a;
+    padding-top: 40px;
+    padding-bottom: 40px;
+/*     margin-top: 80px;*/
+  } 
+  
+  .footer h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 27px;
+    color: white; 
+    margin-left: 129px;
+  }
+  
+  .footer p {
+    margin-bottom: 50px;
+    font-size: 16px; 
+    color: #FFE6A7!important;
+  }
+   
+  .list-unstyled a{ 
+    margin-left: 130px; 
+    color: #FFE6A7;
+  }
+  .footer .list-unstyled ul li {
+    margin-bottom: 10px; 
+    text-align: center;
+  }
+  
+  .footer form .form-control {
+    margin-bottom: 20px;
+  }
+  
+  .footer button[type="submit"] {
+    background-color: #99582A;
+    color: #fff;
+    border: none;
+  }
+  
+  .footer button[type="submit"]:hover {
+    background-color:#6F1D1B ;  
+    color: wheat;
+  }
+  
+  .footer p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #efeded;
+  }
+</style>
+
+
+
+
+  <!-- Tagline-Intro -->
+<div class="main-container">
+  <div class="container text-center" id="intro-container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-1" id="intro-text">
+        <h1 id="head-1">Welcome to our HelpGeared!</h1><br>
+        <h2 id="head-2">Great futures are built with a small charity</h2><br>
+        <a href="/Donate" target="_blank" class="button">Donate now</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  
+    <!-- Donation Buttons -->
+
+    <div class="new-container">
+      <div class=contain>
+        <div class=card_new>
+          <div class=image>
+            <img src="/images/food.png">
+          </div>
+          <div class=content>
+            <h3>Food</h3>
+            <p>Your food donation can nourish both body and soul, providing sustenance and comfort to those facing hunger and reminding them that they are not alone.</p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class=contain>
+        <div class=card_new>
+          <div class=image>
+            <img src="/images/cloth.png">
+          </div>
+          <div class=content>
+            <h3>Cloth</h3>
+            <p>Your donation of clothing can bring warmth, comfort, and dignity to someone in need, giving them the confidence to face life's challenges with optimism. </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class=contain>
+        <div class=card_new>
+          <div class=image>
+            <img  src="/images/fund.png">
+          </div>
+          <div class=content>
+            <h3>Fund</h3>
+            <p>By donating to those in need, you have the power to uplift someone's spirits, provide hope for a better future, and make a positive impact on the world. Donate Now! </p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!--         carousel     -->
+ <section class="coloured-section" id="testimonials">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-pause="hover" data-bs-ride="true" data-bs-interval="5000">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="testimonial-image" src="/images/Charity1.jpeg" alt="">
+      </div>
+
+      <div class="carousel-item"> 
+      <img class="testimonial-image" src="/images/Charity2.jpeg" alt="">
+      </div> 
+
+      <div class="carousel-item"> 
+        <img class="testimonial-image" src="/images/Charity3.jpeg" alt="">
+        </div> 
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</section>
+
+  
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,289 @@
+<%- include("partials/header")%>
+
+
+<style>
+    .inputBOX{
+    border: 3px solid #bcbcbc;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  
+  .inputBOX{
+    margin: 0px auto 0px;
+  }
+
+  #places{
+    margin-bottom: 30px;
+  }
+  
+  #ClothesHeading{
+    color: white;
+    text-align: center;
+  }
+  
+  .card{
+    margin: 0px auto 0px;
+    margin-bottom: 25px;
+    width: 50%;
+  }
+  
+  .Place-name{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 3px;
+  }
+  
+  .card-image{
+    margin: 0px auto 0px;
+    padding-bottom: 5px;
+  }
+  
+  .address{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  
+  
+  .detailsButton{
+    background-color: rgb(145, 222, 29);
+    color: black;
+    border: 2px solid rgb(46, 66, 15);
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+  }
+  
+  .detailsButton:hover{
+    background-color: #6F1D1B;
+    color: white;
+    border: 2px solid #6F1D1B;
+    border-radius: 10px;
+  }
+  
+  .MapsButton{
+    background-color: #cd8704;
+    color: white;
+    border: 2px solid rgb(66, 15, 15);
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+  }
+  
+  .MapsButton:hover{
+    background-color: #f13532;
+    color: white;
+    border: 2px solid #99582A;
+    border-radius: 10px;
+  }
+
+  .paymentButton{
+    background-color: blue;
+    color: white;
+    width: 30%;
+    border-radius: 5px;
+    font-size: large;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 207px;
+  }
+  .paymentButton:hover{
+    background-color: rgb(111, 0, 255);
+    color: white;
+    border-radius: 10px;
+  }
+
+</style>
+
+
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+
+<body>
+    <div class="container" style="background-color: rgb(65, 65, 65); margin-top: 40px; margin-bottom: 40px; padding-top: 40px; padding-bottom: 20px;">
+        <div id="map" style="margin-top: 30px;"></div>
+          <div class="form-group inputBOX" style="width:50%;">
+              <h1 id="ClothesHeading">Search for Places to donate Food</h1>  
+              <input class="form-control" id="autocomplete" type="text" placeholder="Enter a location" style="text-align: center; border: 2px solid #e0991f; font-size: 25px; width: 80%; margin-left: 60px; margin-top: 20px;">
+              <br> 
+              <select class="form-control" name="" id="type" style="text-align: center; border: 2px solid; width: 80%; margin-left: 60px;">
+                  <option>-------------Select Search Radius in Meters-------------</option>
+                  <option id='1'>500</option>
+                  <option id='2'>1000</option>
+                  <option id='3'>3000</option>
+                  <option id='4'>5000</option>
+                  <option id='5'>10000</option>
+              </select>
+          </div><br>
+          <div id="places"></div>
+        </div>
+        
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert@latest/dist/sweetalert.min.js"></script>
+
+    <script>
+            function initMap() {
+ 
+                autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')),
+                    { types: ['geocode'] });
+
+                // When the user selects an address from the dropdown, search for nearby places.
+                autocomplete.addListener('place_changed', searchNearbyPlaces);
+                }
+
+                document.getElementById('type').onchange = searchNearbyPlaces
+
+                function searchNearbyPlaces() {
+                document.getElementById('places').innerHTML = ''
+                // Get the place details from the autocomplete object.
+                var place = autocomplete.getPlace();
+                console.log(place)
+
+                // Create a map centered at the location entered in the autocomplete field.
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: place.geometry.location,
+                    zoom: 15
+                });
+
+                // Perform a nearby search for places of type 'store'.
+                service = new google.maps.places.PlacesService(map);
+                service.nearbySearch({
+                    location: place.geometry.location,
+                    radius: [document.getElementById('type').value],
+                    name: "Orphanage"
+                }, callback);
+                }
+
+                function callback(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    console.log(results.length)
+                    for (var i = 0; i < results.length; i++) {
+                        createMarker(results[i]);
+                    }
+                }
+                }
+
+
+                function createMarker(place) {
+                    console.log(place);
+                    var placesDiv = document.getElementById("places");
+                    var card = document.createElement("div");
+                    card.classList.add("card");
+                    var cardHeader = document.createElement("h2");
+                    cardHeader.classList.add("Place-name");
+                    cardHeader.textContent = place.name;
+                    card.appendChild(cardHeader);
+
+
+
+                    // Create card body with place details
+                    var cardBody = document.createElement("div");
+                    cardBody.classList.add("card-body");
+
+                    var ButtonRow = document.createElement("div");
+                    ButtonRow.classList.add("button-row");
+
+                    var address = document.createElement("h4");
+                    address.classList.add("address");
+                    address.textContent = place.vicinity;
+                    
+                    // Create button to view more details
+                    var detailsButton = document.createElement("button");
+                    detailsButton.classList.add("detailsButton");
+                    detailsButton.innerText = "View Details";
+                    detailsButton.style.marginLeft = "120px";
+                    detailsButton.style.marginRight = "10px";
+                    detailsButton.addEventListener("click", function() {
+                        var service = new google.maps.places.PlacesService(map);
+                        service.getDetails(
+                            {
+                                placeId: place.place_id,
+                            },
+                            function(result, status) {
+                                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                                    swal({
+                                        title: result.name,
+                                        text: `Phone number: ${result.formatted_phone_number}\nWebsite: ${result.website}`,
+                                    });
+                                } else {
+                                    console.error(status);
+                                }
+                            }
+                        );
+                    });
+
+
+                    var MapsButton = document.createElement("button");
+                    MapsButton.classList.add("MapsButton");
+                    MapsButton.innerText = "View in Maps";
+                    MapsButton.addEventListener("click", function() {
+                        const placeId = place.place_id;
+
+                        const url = `https://www.google.com/maps/place/?q=place_id:${placeId}`;
+
+                        // Open the URL in a new tab
+                        window.open(url, "_blank");
+                    });      
+                    
+                    // Create a button to show payment methods
+                    var paymentButton = document.createElement("button");
+                    paymentButton.classList.add("paymentButton");
+                    paymentButton.innerText = "Payment Methods";
+                    paymentButton.onclick = function() {
+                        location.href = "/Payment";
+                    };
+              
+                    
+
+                    ButtonRow.appendChild(detailsButton);
+                    ButtonRow.appendChild(MapsButton);
+                    ButtonRow.appendChild(paymentButton);
+
+
+                    // Create card image with place photo
+                    if (place.photos) {
+                        var photoUrl = place.photos[0].getUrl();
+                    } else {
+                        var photoUrl = "https://via.placeholder.com/150";
+                    }
+
+                    var cardImage = document.createElement("div");
+                    cardImage.classList.add("card-image");
+                    cardImage.innerHTML = `<img width="300" height="300" src="${photoUrl}" alt="${place.name}"/>`;
+                    card.appendChild(cardImage);
+
+                    cardBody.appendChild(address);
+                    cardBody.appendChild(ButtonRow);
+
+                    card.appendChild(cardBody);
+
+                    // Add the card to the list of places
+                    placesDiv.appendChild(card);
+                }
+                  
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0i-DE5npqCIwQ5SGDZOwLAuOVmzZRWEA&libraries=places&callback=initMap"
+        async defer>
+    </script>
+</body>
+
+</html>
+
+<%- include("partials/footer") %>
+
+

@@ -1,0 +1,174 @@
+<%- include("partials/header") %>
+
+<style>
+
+/* Donate Buttons */
+
+
+ .text-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ #donation-cards{
+  padding-left: 40px;
+  padding-right: 40px; 
+  margin-top:50px;
+  margin-bottom: 40px;
+ }
+
+ #donation-cards-inside{
+  border: 2px solid #303030;
+ }
+
+ .card-img-top{
+  border: 2px solid #cdca68;
+  border-radius: 50%; 
+  background-color: black;
+ } 
+
+.card-title{
+  color: darkgreen;
+  font-size: 50px
+}
+
+.Donate-card-para{
+  font-size: 20px
+}
+
+.button{
+  background-color: darkgreen;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  transition: 0.5s ease-out;
+}
+
+
+
+@media (max-width: 900px) {
+  #donation-cards-inside{
+    border: 1px solid #15f4bc;
+  }
+}
+
+
+/* Donation Payment */
+
+
+
+.donation-container {
+  border-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-bottom: 50px;
+}
+
+.donation-text {
+  flex-basis: 60%;
+  padding-right: 20px;
+}
+
+.donation-text h2 {
+  font-size: 40px;
+  padding-bottom: 20px;
+  color: black;
+  margin: 0;
+}
+
+.donation-text p {
+  font-size: 18px;
+  color: black;
+  margin: 0;
+}
+
+.donate-button {
+  flex-basis: 30%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: White;
+  background-color: DarkGreen;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #2E8B57;
+}
+
+</style>
+
+<!-- Donation Buttons -->
+<div class="container text-center" id="Donation-box">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-1" id="donation-cards">
+        <div class="card" style="width: 18rem;" id="donation-cards-inside">
+          <img src="/images/food.png" class="card-img-top" alt="Food Donation">
+          <div class="card-body">
+            <h5 class="card-title">Food</h5>
+            <p class="Donate-card-para">Your generosity can help put a smile on someone's face. Donate food today.</p>
+            <button class="button" onclick="window.location.href='/Food'">Donate</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 col-sm-1" id="donation-cards">
+        <div class="card" style="width: 18rem;" id="donation-cards-inside">
+          <img src="/images/cloth.png" class="card-img-top" alt="ClothsDonation">
+          <div class="card-body">
+            <h5 class="card-title">Clothes</h5>
+            <p class="Donate-card-para">Your unwanted clothes can bring warmth and comfort to those in need.</p>
+            <button class="button" onclick="window.location.href='/Clothes'">Donate</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-4 col-md-6 col-sm-1" id="donation-cards">
+        <div class="card" style="width: 18rem;" id="donation-cards-inside">
+          <img src="/images/fund.png" class="card-img-top" alt="Funds donation">
+          <div class="card-body">
+            <h5 class="card-title">Funds</h5>
+            <p class="Donate-card-para">Your generosity can provide critical resources to those who need it most.</p>
+            <button class="button" onclick="window.location.href='/Funds'">Donate</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+  
+  <!-- Donation Payment -->
+  
+        <div class="donation-container">
+          <div class="donation-text">
+            <h2>Donate Now</h2>
+            <p>Your generosity can make a significant impact on the lives of those in need. By donating to charity, you can provide critical resources like food, shelter, and medical care to individuals and families who are struggling to make ends meet. Your donation can help support education programs, environmental initiatives, and community outreach efforts that aim to create a brighter future for us all. Every little bit helps, and your contribution can make a world of difference. So please, consider donating to charity today and join us in our mission to create a more compassionate and equitable world for everyone.</p>
+          </div>
+          <div class="donate-button">
+            <button onclick="location.href='/Payment'">Donate</button>
+          </div>
+        </div>
+  
+
+<%- include("partials/footer") %>
