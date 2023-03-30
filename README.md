@@ -48,9 +48,9 @@ The contents in this project follow the below structure
 
 - Our solution is mainly backed by Node.js and the Front-End is    written in HTML, CSS, JavaScript along with the usage of Bootstrap Framework.
 
-- For fetching the List of NGOs and Place Details we have extensively used <b>Google Places API<b> available in the Google Cloud Console.
+- For fetching the List of NGOs and Place Details we have extensively used <b>Google Places API</b> available in the Google Cloud Console.
 
-- We have also implemented User Authentication using <b>OAuth 2.0<b> fulfilled by the Google Cloud Console.
+- We have also implemented User Authentication using <b>OAuth 2.0</b> fulfilled by the Google Cloud Console.
 
 ## Website Snippets
 
