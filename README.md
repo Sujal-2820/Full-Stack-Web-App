@@ -55,7 +55,7 @@ The contents in this project follow the below structure
 
 <img src="./Designs/Home Screen.png" width="50%"><br><br>
 <img src="./Designs/Carousel.png" width="50%"><br><br>
-<img src="./Designs/Donation Boxes.png" width=33"%">
+<img src="./Designs/Donation Boxes.png" width="33%"><br><br>
 <img src="./Designs/PlaceList1.png" width="33%">
 <img src="./Designs/PlaceList2.png" width="33%">
 
