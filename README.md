@@ -104,7 +104,7 @@ We understand that access to food, funds, and clothes is essential to their surv
 <p align="left">
 <a href="https://github.com/Sujal-2820"><img width="128px" src="./Designs/Sujal.jpeg"></a>
 <a href="https://github.com/silky-modi22"><img width="128px" src="./Designs/Silky1.jpeg"></a>
-<a href="https://github.com/sudhanshujoshi95"><img width="128px" src="./Designs/Sudhanshu.IMG.jpg"></a>
+<a href="https://github.com/sudhanshujoshi95"><img width="125px" src="./Designs/Sudhanshu.IMG.jpg"></a>
 </p>
 ## Authors
 
