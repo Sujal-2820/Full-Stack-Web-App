@@ -12,8 +12,8 @@ A Google DSC Solution made to provide a centralized platform that provides compr
 
 You can checkout our video submission demo on youtube by clicking on the thumbnail below.
 
-<a href="http://www.youtube.com/">
-<img src="https://youtu.be/lHOfRCVUROw" width="500px">                                                                                
+<a href="https://youtu.be/lHOfRCVUROw">
+<img src="./Designs/Solution Challenge.png" width="500px">                                                                                
 </a>
 
 ## Project Info
