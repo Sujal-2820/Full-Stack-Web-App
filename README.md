@@ -13,7 +13,7 @@ A Google DSC Solution made to provide a centralized platform that provides compr
 You can checkout our video submission demo on youtube by clicking on the thumbnail below.
 
 <a href="http://www.youtube.com/">
-<img src="https://img.youtube.com/vi/dinzfBUDqi0/maxresdefault.jpg" width="500px">                                                                                
+<img src="https://youtu.be/lHOfRCVUROw" width="500px">                                                                                
 </a>
 
 ## Project Info
